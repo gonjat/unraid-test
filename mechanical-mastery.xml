@@ -41,7 +41,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/Encrypted/</HostDir>
+      <HostDir>/mnt/user/appdata/MechanicalMystery/</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
