@@ -17,7 +17,7 @@
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/gonjat/unraid-templates/main/master/ftb-oceanblock_server.xml</TemplateURL>
-  <Icon>https://apps.modpacks.ch/modpacks/art/87/logo.png&w=64&q=75</Icon>
+  <Icon>https://apps.modpacks.ch/modpacks/art/87/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
