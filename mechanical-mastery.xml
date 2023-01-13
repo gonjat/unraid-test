@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MechanicalMastery</Name>
+  <Repository>gonjat/docker-mechanical-mastery</Repository>
+  <Registry>https://hub.docker.com/repository/docker/gonjat/docker-mechanical-mastery</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/130540-gonjats-modded-minecraft-servers/</Support>
+  <Project>https://www.curseforge.com/minecraft/modpacks/mechanical-mastery</Project>
+  <Overview>Mechanical Mastery Modded Minecraft Server&#xD;
+[br]Version tags available:&#xD;
+[br] - latest&#xD;
+[br]Or pick a version listed on docker hub&#xD;
+[br][li]You must accept the EULA by setting the [b]EULA[/b] variable to true[/span]</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/gonjat/unraid-templates/main/mechanical-mastery.xml</TemplateURL>
+  <Icon>https://media.forgecdn.net/avatars/thumbnails/611/624/64/64/637996243327645389.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1667758049</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Mechanical Mastery Modded Minecraft Server&#xD;
+[br]Version tags available:&#xD;
+[br] - latest&#xD;
+[br]Or pick a version listed on docker hub&#xD;
+[br][li]You must accept the EULA by setting the [b]EULA[/b] variable to true[/span]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25567</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MechanicalMastery/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>EULA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Powered By Dockers Awesome Sauce!</Value>
+      <Name>MOTD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-Xms3072m -Xmx7168m</Value>
+      <Name>JVM_OPTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>world</Value>
+      <Name>LEVEL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Installed Location" Target="/data" Default="/mnt/user/appdata/ftboceanblock/" Mode="rw" Description="Path to store the installed server files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MechanicalMastery/</Config>
+  <Config Name="EULA" Target="EULA" Default="false" Mode="" Description="Do you agree to the Mojang EULA available at https://account.mojang.com/documents/minecraft_eula? Server will not start without accepting. Set to 'true' to accept." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Port" Target="25565" Default="25565" Mode="tcp" Description="Port for the server" Type="Port" Display="always" Required="false" Mask="false">25567</Config>
+  <Config Name="MOTD" Target="MOTD" Default="Powered By Dockers Awesome Sauce!" Mode="" Description="Custom Message of the Day" Type="Variable" Display="always" Required="false" Mask="false">Powered By Dockers Awesome Sauce!</Config>
+  <Config Name="JVM_OPTS" Target="JVM_OPTS" Default="-Xms3072m -Xmx7168m" Mode="" Description="Java Options" Type="Variable" Display="always" Required="false" Mask="false">-Xms3072m -Xmx7168m</Config>
+  <Config Name="LEVEL" Target="LEVEL" Default="world" Mode="" Description="Name of the world directory.  It is usually world." Type="Variable" Display="advanced" Required="false" Mask="false">world</Config>
+</Container>
